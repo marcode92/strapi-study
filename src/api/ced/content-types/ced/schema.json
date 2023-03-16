@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ceds",
+  "info": {
+    "singularName": "ced",
+    "pluralName": "ceds",
+    "displayName": "ced"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "desc": {
+      "type": "string"
+    },
+    "lev1": {
+      "type": "uid"
+    }
+  }
+}
