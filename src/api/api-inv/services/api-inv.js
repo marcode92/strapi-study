@@ -5,7 +5,7 @@ module.exports = {
         const entries = await strapi.entityService.findMany(
           "api::article.article",
           {
-            fields: ["id", "title", "slug", "createdAt"],
+            fields: ["id", "title", "desc", "createdAt"],
             populate: {
               author: {
                 fields: ["name", "email"],

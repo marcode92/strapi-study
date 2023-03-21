@@ -1,16 +1,16 @@
 module.exports = {
     inventory: async () => {
         try {
-            const entries = await strapi.entityService.findOne(
+            const entries = await strapi.entityService.findMany(
                 "api::ced.ced",
                 {
-                    fields: ["desc","lev1"],
+                    fields: ["id,desc"],
                     populate:{
                         test: {
-                            fields:["desc"]
+                            fields:["id,desc"]
                         }
-                    }
-                }
+                    },
+                },
             )
 /* 
             let entriesReduced;
@@ -25,6 +25,35 @@ module.exports = {
                 return acc;
               }, []);
             } */
+            return entries;
+        } catch (err) {
+            console.log(err)
+        }
+    },
+    getone: async (id) => {
+        try {
+            const entries = await strapi.entityService.findOne(
+                "api::ced.ced",
+                id,
+                {
+                    fields: ["id, desc,lev1"],
+                    populate:{
+                        test: {
+                            fields:["id"]
+                        }
+                    },
+                },
+            )
+
+            return entries;
+        } catch (err) {
+            console.log(err)
+        }
+    },
+    create: async (obj) => {
+        try {
+            const entries = await strapi.entityService.create("api::ced.ced",obj)
+
             return entries;
         } catch (err) {
             console.log(err)

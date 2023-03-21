@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ced2s",
+  "info": {
+    "singularName": "ced2",
+    "pluralName": "ced2s",
+    "displayName": "ced2"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "lev2": {
+      "type": "string"
+    },
+    "test": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ced.ced"
+    }
+  }
+}
