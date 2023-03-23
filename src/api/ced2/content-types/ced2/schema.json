@@ -11,13 +11,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "lev2": {
+    "element": {
       "type": "string"
     },
-    "test": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::ced.ced"
+    "category": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "string"
     }
   }
 }
